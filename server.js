@@ -5,6 +5,8 @@ const port = process.env.PORT || 3000
 const logger = (req, res, next) => {
 	console.log(req.url)
 	console.dir(req.ip)
+	let ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress 
+	console.log(ip)
 	next()
 }
 
