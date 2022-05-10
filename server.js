@@ -4,7 +4,7 @@ const port = process.env.PORT || 3000
 
 const logger = (req, res, next) => {
 	console.log(req.url)
-	console.dir(req.ips)
+	console.dir(req.ip)
 	next()
 }
 
