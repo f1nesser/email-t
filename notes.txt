@@ -1,0 +1,10 @@
+to-do:
+
+big question marks
+  - email clients fetching images before actually openning it
+  - attaching images before sent triggering  
+    - potential solution: add a "email sent" column to email table which determines whether to log it or not
+
+concerns:
+  - making more calls to db than neccessary 
+  - ugly code bruh

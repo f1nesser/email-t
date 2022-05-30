@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model email {
+  id        Int      @id
+  createdat DateTime @db.Date
+  subject   String   @db.VarChar
+  view      view[]
+}
+
+model view {
+  id       Int      @id @default(autoincrement())
+  viewdate DateTime @db.Date
+  ip       String?  @db.VarChar
+  emailid  Int?
+  email    email?   @relation(fields: [emailid], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
