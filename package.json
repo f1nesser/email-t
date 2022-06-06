@@ -7,7 +7,8 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "nodemon server.js",
-        "build": "npm i"
+        "build": "npm i",
+        "start": "npx prisma generate && node server.js"
     },
     "repository": {
         "type": "git",

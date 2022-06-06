@@ -24,7 +24,6 @@ const logger = async (req, res, next) => {
         next()
         return
     }
-
     let emailFile = req.url.split('/')[1]
 
     let data = {
